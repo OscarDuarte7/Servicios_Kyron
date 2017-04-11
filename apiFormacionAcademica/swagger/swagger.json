@@ -941,9 +941,6 @@
                 },
                 "NombreNivel": {
                     "type": "string"
-                },
-                "ProgramaId": {
-                    "$ref": "#/definitions/Programa"
                 }
             }
         },
@@ -959,8 +956,7 @@
                     "$ref": "#/definitions/Institucion"
                 },
                 "NivelFormacion": {
-                    "type": "number",
-                    "format": "double"
+                    "$ref": "#/definitions/NivelFormacion"
                 },
                 "NombrePrograma": {
                     "type": "string"
@@ -993,16 +989,16 @@
             "description": "NivelFormacionController oprations for NivelFormacion\n"
         },
         {
-            "name": "formacion_academica",
-            "description": "FormacionAcademicaController oprations for FormacionAcademica\n"
-        },
-        {
             "name": "institucion",
             "description": "InstitucionController oprations for Institucion\n"
         },
         {
             "name": "programa",
             "description": "ProgramaController oprations for Programa\n"
+        },
+        {
+            "name": "formacion_academica",
+            "description": "FormacionAcademicaController oprations for FormacionAcademica\n"
         },
         {
             "name": "titulo",

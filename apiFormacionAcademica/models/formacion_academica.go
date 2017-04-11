@@ -11,7 +11,7 @@ import (
 )
 
 type FormacionAcademica struct {
-	Id                int          `orm:"column(id);pk"`
+	Id                int          `orm:"column(id);pk;auto"`
 	PersonaId         int          `orm:"column(persona_id)"`
 	InstitucionId     *Institucion `orm:"column(institucion_id);rel(fk)"`
 	ProgramaId        *Programa    `orm:"column(programa_id);rel(fk)"`
@@ -57,7 +57,7 @@ func GetFormacionAcademicaById(id int) (v *FormacionAcademica, err error) {
 func GetAllFormacionAcademica(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(FormacionAcademica))
+	qs := o.QueryTable(new(FormacionAcademica)).RelatedSel()
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

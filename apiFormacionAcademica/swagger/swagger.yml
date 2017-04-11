@@ -626,8 +626,6 @@ definitions:
         format: int64
       NombreNivel:
         type: string
-      ProgramaId:
-        $ref: '#/definitions/Programa'
   Programa:
     title: Programa
     type: object
@@ -638,8 +636,7 @@ definitions:
       InstitucionId:
         $ref: '#/definitions/Institucion'
       NivelFormacion:
-        type: number
-        format: double
+        $ref: '#/definitions/NivelFormacion'
       NombrePrograma:
         type: string
   Titulo:
@@ -659,15 +656,15 @@ tags:
 - name: nivel_formacion
   description: |
     NivelFormacionController oprations for NivelFormacion
-- name: formacion_academica
-  description: |
-    FormacionAcademicaController oprations for FormacionAcademica
 - name: institucion
   description: |
     InstitucionController oprations for Institucion
 - name: programa
   description: |
     ProgramaController oprations for Programa
+- name: formacion_academica
+  description: |
+    FormacionAcademicaController oprations for FormacionAcademica
 - name: titulo
   description: |
     TituloController oprations for Titulo
