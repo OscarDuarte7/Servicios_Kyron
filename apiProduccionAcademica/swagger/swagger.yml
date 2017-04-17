@@ -1,0 +1,1164 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Url http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /v1
+paths:
+  /criterio_evaluacion/:
+    get:
+      tags:
+      - criterio_evaluacion
+      description: get CriterioEvaluacion
+      operationId: CriterioEvaluacionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/CriterioEvaluacion'
+        "403": {}
+    post:
+      tags:
+      - criterio_evaluacion
+      description: create CriterioEvaluacion
+      operationId: CriterioEvaluacionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for CriterioEvaluacion content
+        required: true
+        schema:
+          $ref: '#/definitions/CriterioEvaluacion'
+      responses:
+        "201":
+          description: '{int} models.CriterioEvaluacion'
+        "403":
+          description: body is empty
+  /criterio_evaluacion/{id}:
+    get:
+      tags:
+      - criterio_evaluacion
+      description: get CriterioEvaluacion by id
+      operationId: CriterioEvaluacionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/CriterioEvaluacion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - criterio_evaluacion
+      description: update the CriterioEvaluacion
+      operationId: CriterioEvaluacionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for CriterioEvaluacion content
+        required: true
+        schema:
+          $ref: '#/definitions/CriterioEvaluacion'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/CriterioEvaluacion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - criterio_evaluacion
+      description: delete the CriterioEvaluacion
+      operationId: CriterioEvaluacionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /dato/:
+    get:
+      tags:
+      - dato
+      description: get Dato
+      operationId: DatoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/Dato'
+        "403": {}
+    post:
+      tags:
+      - dato
+      description: create Dato
+      operationId: DatoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Dato content
+        required: true
+        schema:
+          $ref: '#/definitions/Dato'
+      responses:
+        "201":
+          description: '{int} models.Dato'
+        "403":
+          description: body is empty
+  /dato/{id}:
+    get:
+      tags:
+      - dato
+      description: get Dato by id
+      operationId: DatoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/Dato'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dato
+      description: update the Dato
+      operationId: DatoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Dato content
+        required: true
+        schema:
+          $ref: '#/definitions/Dato'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/Dato'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dato
+      description: delete the Dato
+      operationId: DatoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /dato_produccion/:
+    get:
+      tags:
+      - dato_produccion
+      description: get DatoProduccion
+      operationId: DatoProduccionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/DatoProduccion'
+        "403": {}
+    post:
+      tags:
+      - dato_produccion
+      description: create DatoProduccion
+      operationId: DatoProduccionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for DatoProduccion content
+        required: true
+        schema:
+          $ref: '#/definitions/DatoProduccion'
+      responses:
+        "201":
+          description: '{int} models.DatoProduccion'
+        "403":
+          description: body is empty
+  /dato_produccion/{id}:
+    get:
+      tags:
+      - dato_produccion
+      description: get DatoProduccion by id
+      operationId: DatoProduccionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/DatoProduccion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dato_produccion
+      description: update the DatoProduccion
+      operationId: DatoProduccionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for DatoProduccion content
+        required: true
+        schema:
+          $ref: '#/definitions/DatoProduccion'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/DatoProduccion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dato_produccion
+      description: delete the DatoProduccion
+      operationId: DatoProduccionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /dato_subtipo/:
+    get:
+      tags:
+      - dato_subtipo
+      description: get DatoSubtipo
+      operationId: DatoSubtipoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/DatoSubtipo'
+        "403": {}
+    post:
+      tags:
+      - dato_subtipo
+      description: create DatoSubtipo
+      operationId: DatoSubtipoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for DatoSubtipo content
+        required: true
+        schema:
+          $ref: '#/definitions/DatoSubtipo'
+      responses:
+        "201":
+          description: '{int} models.DatoSubtipo'
+        "403":
+          description: body is empty
+  /dato_subtipo/{id}:
+    get:
+      tags:
+      - dato_subtipo
+      description: get DatoSubtipo by id
+      operationId: DatoSubtipoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/DatoSubtipo'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - dato_subtipo
+      description: update the DatoSubtipo
+      operationId: DatoSubtipoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for DatoSubtipo content
+        required: true
+        schema:
+          $ref: '#/definitions/DatoSubtipo'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/DatoSubtipo'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - dato_subtipo
+      description: delete the DatoSubtipo
+      operationId: DatoSubtipoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /evaluador/:
+    get:
+      tags:
+      - evaluador
+      description: get Evaluador
+      operationId: EvaluadorController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/Evaluador'
+        "403": {}
+    post:
+      tags:
+      - evaluador
+      description: create Evaluador
+      operationId: EvaluadorController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Evaluador content
+        required: true
+        schema:
+          $ref: '#/definitions/Evaluador'
+      responses:
+        "201":
+          description: '{int} models.Evaluador'
+        "403":
+          description: body is empty
+  /evaluador/{id}:
+    get:
+      tags:
+      - evaluador
+      description: get Evaluador by id
+      operationId: EvaluadorController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/Evaluador'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - evaluador
+      description: update the Evaluador
+      operationId: EvaluadorController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Evaluador content
+        required: true
+        schema:
+          $ref: '#/definitions/Evaluador'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/Evaluador'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - evaluador
+      description: delete the Evaluador
+      operationId: EvaluadorController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /opcion_dato/:
+    get:
+      tags:
+      - opcion_dato
+      description: get OpcionDato
+      operationId: OpcionDatoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/OpcionDato'
+        "403": {}
+    post:
+      tags:
+      - opcion_dato
+      description: create OpcionDato
+      operationId: OpcionDatoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for OpcionDato content
+        required: true
+        schema:
+          $ref: '#/definitions/OpcionDato'
+      responses:
+        "201":
+          description: '{int} models.OpcionDato'
+        "403":
+          description: body is empty
+  /opcion_dato/{id}:
+    get:
+      tags:
+      - opcion_dato
+      description: get OpcionDato by id
+      operationId: OpcionDatoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/OpcionDato'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - opcion_dato
+      description: update the OpcionDato
+      operationId: OpcionDatoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for OpcionDato content
+        required: true
+        schema:
+          $ref: '#/definitions/OpcionDato'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/OpcionDato'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - opcion_dato
+      description: delete the OpcionDato
+      operationId: OpcionDatoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /produccion_academica/:
+    get:
+      tags:
+      - produccion_academica
+      description: get ProduccionAcademica
+      operationId: ProduccionAcademicaController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/ProduccionAcademica'
+        "403": {}
+    post:
+      tags:
+      - produccion_academica
+      description: create ProduccionAcademica
+      operationId: ProduccionAcademicaController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ProduccionAcademica content
+        required: true
+        schema:
+          $ref: '#/definitions/ProduccionAcademica'
+      responses:
+        "201":
+          description: '{int} models.ProduccionAcademica'
+        "403":
+          description: body is empty
+  /produccion_academica/{id}:
+    get:
+      tags:
+      - produccion_academica
+      description: get ProduccionAcademica by id
+      operationId: ProduccionAcademicaController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/ProduccionAcademica'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - produccion_academica
+      description: update the ProduccionAcademica
+      operationId: ProduccionAcademicaController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ProduccionAcademica content
+        required: true
+        schema:
+          $ref: '#/definitions/ProduccionAcademica'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/ProduccionAcademica'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - produccion_academica
+      description: delete the ProduccionAcademica
+      operationId: ProduccionAcademicaController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /subtipo_produccion/:
+    get:
+      tags:
+      - subtipo_produccion
+      description: get SubtipoProduccion
+      operationId: SubtipoProduccionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/SubtipoProduccion'
+        "403": {}
+    post:
+      tags:
+      - subtipo_produccion
+      description: create SubtipoProduccion
+      operationId: SubtipoProduccionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for SubtipoProduccion content
+        required: true
+        schema:
+          $ref: '#/definitions/SubtipoProduccion'
+      responses:
+        "201":
+          description: '{int} models.SubtipoProduccion'
+        "403":
+          description: body is empty
+  /subtipo_produccion/{id}:
+    get:
+      tags:
+      - subtipo_produccion
+      description: get SubtipoProduccion by id
+      operationId: SubtipoProduccionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/SubtipoProduccion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - subtipo_produccion
+      description: update the SubtipoProduccion
+      operationId: SubtipoProduccionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for SubtipoProduccion content
+        required: true
+        schema:
+          $ref: '#/definitions/SubtipoProduccion'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/SubtipoProduccion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - subtipo_produccion
+      description: delete the SubtipoProduccion
+      operationId: SubtipoProduccionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /tipo_produccion/:
+    get:
+      tags:
+      - tipo_produccion
+      description: get TipoProduccion
+      operationId: TipoProduccionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/TipoProduccion'
+        "403": {}
+    post:
+      tags:
+      - tipo_produccion
+      description: create TipoProduccion
+      operationId: TipoProduccionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for TipoProduccion content
+        required: true
+        schema:
+          $ref: '#/definitions/TipoProduccion'
+      responses:
+        "201":
+          description: '{int} models.TipoProduccion'
+        "403":
+          description: body is empty
+  /tipo_produccion/{id}:
+    get:
+      tags:
+      - tipo_produccion
+      description: get TipoProduccion by id
+      operationId: TipoProduccionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/TipoProduccion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - tipo_produccion
+      description: update the TipoProduccion
+      operationId: TipoProduccionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for TipoProduccion content
+        required: true
+        schema:
+          $ref: '#/definitions/TipoProduccion'
+      responses:
+        "200":
+          schema:
+            $ref: '#/definitions/TipoProduccion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - tipo_produccion
+      description: delete the TipoProduccion
+      operationId: TipoProduccionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+definitions:
+  CriterioEvaluacion:
+    title: CriterioEvaluacion
+    type: object
+    properties:
+      DatoSubtipoId:
+        $ref: '#/definitions/DatoSubtipo'
+      Id:
+        type: integer
+        format: int64
+      OpcionDatoId:
+        $ref: '#/definitions/OpcionDato'
+  Dato:
+    title: Dato
+    type: object
+    properties:
+      Descripcion:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+  DatoProduccion:
+    title: DatoProduccion
+    type: object
+    properties:
+      DatoSubtipoId:
+        $ref: '#/definitions/DatoSubtipo'
+      Id:
+        type: integer
+        format: int64
+      ProduccionAcademicaId:
+        $ref: '#/definitions/ProduccionAcademica'
+      Valor:
+        type: string
+  DatoSubtipo:
+    title: DatoSubtipo
+    type: object
+    properties:
+      DatoId:
+        $ref: '#/definitions/Dato'
+      Dominio:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      SubtipoProduccion:
+        $ref: '#/definitions/SubtipoProduccion'
+  Evaluador:
+    title: Evaluador
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      PersonaId:
+        type: integer
+        format: int64
+      ProduccionAcademicaId:
+        type: number
+        format: double
+  OpcionDato:
+    title: OpcionDato
+    type: object
+    properties:
+      Dato:
+        $ref: '#/definitions/Dato'
+      Id:
+        type: integer
+        format: int64
+      NombreOpcion:
+        type: string
+  ProduccionAcademica:
+    title: ProduccionAcademica
+    type: object
+    properties:
+      Ciudad:
+        type: string
+      FechaDato:
+        $ref: '#/definitions/&{time Time}'
+      FechaProduccion:
+        $ref: '#/definitions/&{time Time}'
+      Id:
+        type: integer
+        format: int64
+      NumeroAutores:
+        type: integer
+        format: int64
+      Pais:
+        type: string
+      PersonaId:
+        type: integer
+        format: int64
+      SubtipoProduccionId:
+        $ref: '#/definitions/SubtipoProduccion'
+      TituloProduccion:
+        type: string
+      Validacion:
+        type: boolean
+      Vigente:
+        type: boolean
+  SubtipoProduccion:
+    title: SubtipoProduccion
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      TipoProduccion:
+        $ref: '#/definitions/TipoProduccion'
+  TipoProduccion:
+    title: TipoProduccion
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+tags:
+- name: produccion_academica
+  description: |
+    ProduccionAcademicaController oprations for ProduccionAcademica
+- name: tipo_produccion
+  description: |
+    TipoProduccionController oprations for TipoProduccion
+- name: dato_produccion
+  description: |
+    DatoProduccionController oprations for DatoProduccion
+- name: evaluador
+  description: |
+    EvaluadorController oprations for Evaluador
+- name: dato
+  description: |
+    DatoController oprations for Dato
+- name: criterio_evaluacion
+  description: |
+    CriterioEvaluacionController oprations for CriterioEvaluacion
+- name: dato_subtipo
+  description: |
+    DatoSubtipoController oprations for DatoSubtipo
+- name: subtipo_produccion
+  description: |
+    SubtipoProduccionController oprations for SubtipoProduccion
+- name: opcion_dato
+  description: |
+    OpcionDatoController oprations for OpcionDato
+- name: tr_produccion_academica
+  description: |
+    oprations for TrProduccionAcademicaController

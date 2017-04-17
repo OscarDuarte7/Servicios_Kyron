@@ -10,7 +10,7 @@ import (
 )
 
 type DatoProduccion struct {
-	Id                    int                  `orm:"column(id);pk"`
+	Id                    int                  `orm:"column(id);pk;auto"`
 	ProduccionAcademicaId *ProduccionAcademica `orm:"column(produccion_academica_id);rel(fk)"`
 	DatoSubtipoId         *DatoSubtipo         `orm:"column(dato_subtipo_id);rel(fk)"`
 	Valor                 string               `orm:"column(valor);null"`

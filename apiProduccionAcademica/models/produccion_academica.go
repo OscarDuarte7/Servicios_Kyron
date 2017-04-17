@@ -11,7 +11,7 @@ import (
 )
 
 type ProduccionAcademica struct {
-	Id                  int                `orm:"column(id);pk"`
+	Id                  int                `orm:"column(id);pk;auto"`
 	PersonaId           int                `orm:"column(persona_id)"`
 	SubtipoProduccionId *SubtipoProduccion `orm:"column(subtipo_produccion_id);rel(fk)"`
 	FechaProduccion     time.Time          `orm:"column(fecha_produccion);type(date);null"`
